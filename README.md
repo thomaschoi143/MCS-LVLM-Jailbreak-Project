@@ -12,6 +12,37 @@ Here is the mapping between the attack method and folder name:
 | Multi-Modal Linkage <sup>[4](#ref4)</sup> | `MML` |
 | Visual Role-Play <sup>[5](#ref5)</sup> | `visualRolePlay` |
 
+## High-Level Directory Tree
+```
+MCS-LVLM-Jailbreak-Project/  
+├── attack/                        % MAPA (ours) implementation
+│   ├── main.py                    % main attack script (run experiments)
+│   ├── server.py                  % model server (run before attack)
+│   ├── library_initialization.py  % initialize strategy database
+│   ├── requirements.txt           % Python dependencies for attack  
+|   ├── commons                   
+│   │   └── utils.py               % utils shared across agents
+|   ├── framework                  % agent design and instruction prompts
+│   │   ├── agent.py               % abstract parent class for all agents
+│   │   ├── attacker.py            % attacker design
+│   │   └── ...            
+│   ├── hf_models/                 % HuggingFace model helpers and mapping
+│   │   ├── utils.py               % utils to load models
+│   │   └── ...  
+│   ├── slurms/                    % slurm job scripts for HPC experiments 
+│   └── run_experiment.sh          % run a slurm job script with statistics summary
+├── CoA/                           % Chain of Attack baseline
+├── MML/                           % MML baseline
+├── actorAttack/                   % ActorAttack baseline
+├── footInTheDoor/                 % FootInTheDoor baseline
+├── models/                        % empty — download models from HuggingFace
+├── visualRolePlay/                % VRP baseline
+├── summarize_stats.py             % summary utilities to run in every experiment
+├── LICENSE                        % MIT license
+├── README.md
+└── .gitignore
+```
+
 ## How to run the **MAPA** project
 
 1. Download the models from Hugging Face and save them under the `models` folder. The mapping between the model name and model folder name is conducted by the `model_name_to_path_type` function in `attack/hf_models/utils.py`.
