@@ -20,7 +20,7 @@ MCS-LVLM-Jailbreak-Project/
 │   ├── server.py                  % model server (run before attack)
 │   ├── library_initialization.py  % initialize strategy database
 │   ├── requirements.txt           % Python dependencies for attack  
-|   ├── commons                   
+|   ├── commons/                   
 │   │   └── utils.py               % utils shared across agents
 |   ├── framework                  % agent design and instruction prompts
 │   │   ├── agent.py               % abstract parent class for all agents
