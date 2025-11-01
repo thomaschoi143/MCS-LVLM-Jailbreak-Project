@@ -1,4 +1,4 @@
-# Master of Computer Science Research Project - MAPA: MULTI-TURN ADAPTIVE PROMPTING ATTACK ON LARGE VISION-LANGUAGE MODELS
+# Master of Computer Science Research Project - MAPA: Multi-Turn Adaptive Prompting Attack on Large Vision-Language Models
 
 This repository consists of the implementation of our method **MAPA** and the baselines. The code of the baselines are cloned from the official repository with some mandatory adaptation.
 
