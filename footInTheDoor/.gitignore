@@ -1,0 +1,5 @@
+models/
+logs/
+analysis/__pycache__/
+results/**/*.json
+results/**/results_[0-9]*.csv
